@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest, windows-latest, macOS-latest ]
+        os: [ ubuntu-latest, macOS-latest ]
 
     steps:
     - uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
       if: matrix.os != 'windows-latest'
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew aR
+      run: ./gradlew aR --stacktrace
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:
