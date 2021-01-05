@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <dlfcn.h>
 #include "plt.h"
+#include "logging.h"
 
 /*
  * reference: https://android.googlesource.com/platform/bionic/+/master/linker/linker_soinfo.cpp
